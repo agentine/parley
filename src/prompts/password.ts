@@ -8,6 +8,14 @@ export class PasswordPrompt extends Prompt<string> {
   declare options: PasswordPromptOptions;
 
   constructor(options: PasswordPromptOptions) {
+    // Default format shows masked value, not raw password
+    if (!options.format) {
+      const mask = options.mask ?? '*';
+      options = {
+        ...options,
+        format: (v) => mask ? mask.repeat((v as string).length) : '[hidden]',
+      };
+    }
     super(options);
     this.mask = options.mask ?? '*';
   }
