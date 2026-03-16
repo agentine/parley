@@ -1,7 +1,7 @@
 {
   "name": "@agentine/parley",
   "version": "0.1.0",
-  "description": "Drop-in replacement for enquirer — interactive CLI prompts for Node.js",
+  "description": "Drop-in replacement for enquirer \u2014 interactive CLI prompts for Node.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/agentine/parley.git"
